@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gray-950 text-gray-300
+}
+
+@theme {
+  --animate-wiggle: wiggle 2s ease-in-out;
+  --animate-fade: fade .5s ease-in-out;
+  --animate-fade-up: fade-up .5s ease-out;
+  --animate-fade-left: fade-left 1s ease-out;
+  --animate-fade-up-infinite: fade-up .3s ease-out 2s infinite;
+  --animate-fade-down: fade-down .3s ease-out;
+  --animate-open: ani-open .3s ease-out;
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(-3deg);
+    }
+
+    100% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes ani-open {
+    0% {
+      transform: Scale(0)
+    }
+
+    100% {
+      transform: Scale(1)
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem)
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+
+  @keyframes fade-left {
+    0% {
+      opacity: 0;
+      transform: translateX(500%)
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(500%)
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+
+  @keyframes fade-down {
+    0% {
+      opacity: 0;
+      transform: translateY(500%)
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+}
